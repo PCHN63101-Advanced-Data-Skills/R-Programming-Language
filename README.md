@@ -1,2 +1,4 @@
 # The R Programming Language
-Lesson inntroducing the R programming language. Written in Jupyter Books.
+Lesson introducing the R programming language. 
+
+Written in [Jupyter Book](https://jupyterbook.org/).
