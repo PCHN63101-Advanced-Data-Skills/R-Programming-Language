@@ -31,5 +31,5 @@ launch_buttons:
   thebe: true
   
 binder:
-  repo: "hhttps://github.com/PCHN63101-Advanced-Data-Skills/R-Programming-Language"
+  repo: "https://github.com/PCHN63101-Advanced-Data-Skills/R-Programming-Language"
   ref: "master"
