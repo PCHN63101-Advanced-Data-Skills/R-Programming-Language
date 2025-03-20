@@ -41,8 +41,8 @@ launch_buttons:
   #branch: master
 
 thebe:
-  use_thebe_lite: true
-  kernel_name: "ir"
+  use_thebe: true
+  #kernel_name: "ir"
   #binder:
   #  repo: "https://github.com/rocker-org/binder"
   #  ref: "main"
