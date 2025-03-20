@@ -42,7 +42,7 @@ launch_buttons:
 
 thebe:
   use_thebe: true
-  #kernel_name: "ir"
+  kernel_name: "r"
   #binder:
   #  repo: "https://github.com/rocker-org/binder"
   #  ref: "main"
