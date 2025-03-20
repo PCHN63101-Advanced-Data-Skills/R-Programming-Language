@@ -31,6 +31,5 @@ launch_buttons:
   thebe: true
   
 binder:
-  repo: "https://github.com/rocker-org/binder/"
+  repo: "hhttps://github.com/PCHN63101-Advanced-Data-Skills/R-Programming-Language"
   ref: "master"
-  urlpath: "tree"
