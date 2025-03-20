@@ -29,7 +29,9 @@ html:
 
 launch_buttons:
   thebe: true
+  binderhub_url: "https://mybinder.org"
   
 binder:
-  repo: "https://github.com/PCHN63101-Advanced-Data-Skills/R-Programming-Language"
+  repo: "https://github.com/rocker-org/binder/"
   ref: "master"
+  urlpath: "tree"
