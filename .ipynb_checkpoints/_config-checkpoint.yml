@@ -42,8 +42,10 @@ launch_buttons:
 
 thebe:
   use_thebe: true
-  binder:
-    repo: "https://github.com/rocker-org/binder"
-    ref: "main"
-    binder_url: "https://mybinder.org"
+  use_thebe_lite: true
   kernel_name: "ir"
+  #binder:
+  #  repo: "https://github.com/rocker-org/binder"
+  #  ref: "main"
+  #  binder_url: "https://mybinder.org"
+
