@@ -36,6 +36,6 @@ launch_buttons:
 
 thebe:
   use_thebe: true
-  kernel_name: "ir"
-  repository_url: "https://github.com/rocker-org/binder"
-  branch: "master"
+  kernel_name: ir
+  repository_url: https://github.com/rocker-org/binder
+  branch: master
