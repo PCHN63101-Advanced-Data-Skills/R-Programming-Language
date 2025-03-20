@@ -27,9 +27,9 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-#binder:
-#  repo: "https://github.com/rocker-org/binder"
-#  ref: "master" 
+binder:
+  repo: "https://github.com/rocker-org/binder"
+  ref: "master" 
 
 launch_buttons:
   thebe: true
@@ -42,5 +42,8 @@ launch_buttons:
 
 thebe:
   use_thebe: true
-  #kernel_name: "ir"
+  kernel_name: "ir"
+  repository_url: https://github.com/rocker-org/binder
+  branch: master
+  
 
