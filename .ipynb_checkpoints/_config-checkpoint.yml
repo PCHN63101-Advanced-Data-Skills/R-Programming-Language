@@ -34,4 +34,4 @@ launch_buttons:
 binder:
   repo: "https://github.com/rocker-org/binder/"
   ref: "master"
-  urlpath: "tree"
+  path: "rstudio"
