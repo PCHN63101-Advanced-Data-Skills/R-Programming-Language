@@ -29,3 +29,6 @@ html:
 
 launch_buttons:
   thebe: true
+  
+binder:
+  repo: "https://github.com/rocker-org/binder/"
