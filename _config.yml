@@ -34,6 +34,6 @@ html:
 launch_buttons:
   thebe: true
 
- thebe:
+thebe:
   use_thebe: true
   kernel_name: "ir"
