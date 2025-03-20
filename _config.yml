@@ -27,12 +27,14 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-binder:
-  repo: "https://github.com/rocker-org/binder"
-  ref: "master" 
+# Some failed attempts at getting live code to work!
 
-launch_buttons:
-  thebe: true
+#binder:
+#  repo: "https://github.com/rocker-org/binder"
+#  ref: "master" 
+
+#launch_buttons:
+#  thebe: true
 
 #thebe:
 #  use_thebe: true
@@ -40,10 +42,10 @@ launch_buttons:
   #repository_url: https://github.com/rocker-org/binder
   #branch: master
 
-thebe:
-  use_thebe: true
-  kernel_name: "ir"
-  repository_url: https://github.com/rocker-org/binder
-  branch: master
+#thebe:
+#  use_thebe: true
+#  kernel_name: "ir"
+#  repository_url: https://github.com/rocker-org/binder
+#  branch: master
   
 
