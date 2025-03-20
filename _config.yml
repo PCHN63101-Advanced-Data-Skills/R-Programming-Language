@@ -43,8 +43,9 @@ launch_buttons:
 thebe:
   use_thebe: true
   kernel_name: "ir"
-  binder:
-    repo: "https://github.com/binder-examples/r"
-    ref: "master"
-    binder_url: "https://mybinder.org"
+  
+binder:
+  repo: "https://github.com/binder-examples/r"
+  ref: "master"
+  binder_url: "https://mybinder.org"
 
