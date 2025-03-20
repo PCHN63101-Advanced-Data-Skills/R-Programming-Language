@@ -41,7 +41,6 @@ launch_buttons:
   #branch: master
 
 thebe:
-  use_thebe: true
   use_thebe_lite: true
   kernel_name: "ir"
   #binder:
