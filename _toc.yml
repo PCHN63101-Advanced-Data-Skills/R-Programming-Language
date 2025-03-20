@@ -8,3 +8,5 @@ chapters:
 - file: 2.installing-R
 - file: 3.exploring-R
 - file: 4.basic-programming
+- file: 5.scripts
+- file: summary
