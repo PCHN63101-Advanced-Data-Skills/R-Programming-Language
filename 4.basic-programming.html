@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '4.basic-programming';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Working with R Scripts" href="5.scripts.html" />
     <link rel="prev" title="Exploring the R Language" href="3.exploring-R.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,6 +173,8 @@
 <li class="toctree-l1"><a class="reference internal" href="2.installing-R.html">Installing R and RStudio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.exploring-R.html">Exploring the R Language</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Basic Programming Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.scripts.html">Working with R Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary and Quiz</a></li>
 </ul>
 
     </div>
@@ -365,6 +368,22 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">Data Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-frames">Data Frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factors">Factors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow">Control Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While Loops</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
             </nav>
         </div>
@@ -378,8 +397,50 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-programming-concepts">
 <h1>Basic Programming Concepts<a class="headerlink" href="#basic-programming-concepts" title="Link to this heading">#</a></h1>
+<p>This can be a bit dry and tedious to go through, especially with limited context. However, it is worthwhile going through this section at this point to familiarise yourself with some of these concepts. You can then use this section as a <em>reference</em> in future to remind youself of how some of these basic language elements work.</p>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Key Concept</p>
+<p>A variable is a box that we store data inside to use again later. We give this box a name and then refer to it by name whenever we want to use it. Every time we type the name into <code class="docutils literal notranslate"><span class="pre">R</span></code>, the box gets opened and we retrieve the data. This works in much the same way as variables in algebra, where we substitute values of variables into expressions.</p>
+</div>
+</section>
+<section id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Link to this heading">#</a></h2>
+</section>
+<section id="data-structures">
+<h2>Data Structures<a class="headerlink" href="#data-structures" title="Link to this heading">#</a></h2>
+<section id="vectors">
+<h3>Vectors<a class="headerlink" href="#vectors" title="Link to this heading">#</a></h3>
+</section>
+<section id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
+</section>
+<section id="matrices">
+<h3>Matrices<a class="headerlink" href="#matrices" title="Link to this heading">#</a></h3>
+</section>
+<section id="data-frames">
+<h3>Data Frames<a class="headerlink" href="#data-frames" title="Link to this heading">#</a></h3>
+</section>
+<section id="factors">
+<h3>Factors<a class="headerlink" href="#factors" title="Link to this heading">#</a></h3>
+<p>Most programming languages do not have a concept of <em>factors</em>. However, because <code class="docutils literal notranslate"><span class="pre">R</span></code> was designed for statistics and data analysis, a factor is a built-in data type.</p>
+</section>
+</section>
+<section id="control-flow">
+<h2>Control Flow<a class="headerlink" href="#control-flow" title="Link to this heading">#</a></h2>
+<section id="if-statements">
+<h3>If Statements<a class="headerlink" href="#if-statements" title="Link to this heading">#</a></h3>
+</section>
+<section id="for-loops">
+<h3>For Loops<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h3>
+</section>
+<section id="while-loops">
+<h3>While Loops<a class="headerlink" href="#while-loops" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -422,6 +483,15 @@
         <p class="prev-next-title">Exploring the R Language</p>
       </div>
     </a>
+    <a class="right-next"
+       href="5.scripts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Working with R Scripts</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -440,6 +510,22 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators">Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">Data Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-frames">Data Frames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factors">Factors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow">Control Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statements">If Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While Loops</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
   </nav></div>
 
