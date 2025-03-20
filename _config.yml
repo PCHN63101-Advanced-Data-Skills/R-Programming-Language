@@ -29,8 +29,9 @@ html:
 
 launch_buttons:
   thebe: true
+  binderhub_url: "https://mybinder.org/v2/gh/binder-examples/r-conda/HEAD"
   
 binder:
-  repo: "https://github.com/binder-examples/r-conda"
+  repo: "https://github.com/rocker-org/binder/"
   ref: "master"
   urlpath: "tree"
