@@ -35,4 +35,4 @@ binder:
   ref: "master"
 
 thebe:
-  launch_kernel: true
+  request_kernel: true
