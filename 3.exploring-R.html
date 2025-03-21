@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -60,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '3.exploring-R';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -67,7 +66,6 @@
     <link rel="prev" title="Installing R and RStudio" href="2.installing-R.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -92,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -99,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -116,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,17 +156,21 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="The R Programming Language - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="The R Programming Language - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="The R Programming Language - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -174,6 +187,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exploring the R Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.basic-programming.html">Basic Programming Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.scripts.html">Working with R Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.rstudio-projects.html">RStudio Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="summary.html">Summary and Quiz</a></li>
 </ul>
 
@@ -183,14 +197,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -334,17 +343,27 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
 </div></div>
       
     </div>
@@ -360,6 +379,19 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-r-console">The R Console</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-as-a-calculator">R as a Calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-a-variable">Assigning Values to a Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-a-dataset">Viewing a Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-plot">Making a Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-a-correlation">Calculating a Correlation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -371,7 +403,171 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exploring-the-r-language">
 <h1>Exploring the R Language<a class="headerlink" href="#exploring-the-r-language" title="Link to this heading">#</a></h1>
-<p>Before we start digging into the details of the <code class="docutils literal notranslate"><span class="pre">R</span></code> language, it is useful to see some motivating examples of using <code class="docutils literal notranslate"><span class="pre">R</span></code>. Here, you can start to have a play with using <code class="docutils literal notranslate"><span class="pre">R</span></code> and getting a feel for the workflow.</p>
+<p>Before we start digging into the details of programming with <code class="docutils literal notranslate"><span class="pre">R</span></code>, it is useful to see some motivating examples of actually using <code class="docutils literal notranslate"><span class="pre">R</span></code>. Here, you can start to play around with <code class="docutils literal notranslate"><span class="pre">R</span></code> and <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> and get a feel for the workflow.</p>
+<section id="the-r-console">
+<h2>The R Console<a class="headerlink" href="#the-r-console" title="Link to this heading">#</a></h2>
+<p>When you first open <code class="docutils literal notranslate"><span class="pre">RStudio</span></code>, the console will be visible as a panel on the <em>left</em>, as shown in <a class="reference internal" href="#rstudio-fig"><span class="std std-numref">Fig. 1</span></a>. You can see that there is a tab marked <code class="docutils literal notranslate"><span class="pre">Console</span></code> at the top of this panel. When we first launch <code class="docutils literal notranslate"><span class="pre">R</span></code>, information about the current version, license and other disclaimers will be printed in the console. Below all this, we will see the prompt, indicated by the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> symbol. This indicates where we can type commands for <code class="docutils literal notranslate"><span class="pre">R</span></code> to interpret.</p>
+<figure class="align-default" id="rstudio-fig">
+<a class="reference internal image-reference" href="_images/rstudio.png"><img alt="_images/rstudio.png" src="_images/rstudio.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The basic <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> interface.</span><a class="headerlink" href="#rstudio-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Communicating With R</p>
+<p>Like any interpreted programming language<a class="footnote-reference brackets" href="#foot1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, we type commands into the <code class="docutils literal notranslate"><span class="pre">R</span></code> console, press <kbd>⏎</kbd> and what we typed gets sent to the <code class="docutils literal notranslate"><span class="pre">R</span></code> interpreter. If the interpreter understands what we have types, it will perform the requested actions and then return the result. If it does not understand what we typed, it will return an error.</p>
+<p>In general, the workflow when using <code class="docutils literal notranslate"><span class="pre">R</span></code> is like a conversation. At each point, we ask <code class="docutils literal notranslate"><span class="pre">R</span></code> to do something for us and <code class="docutils literal notranslate"><span class="pre">R</span></code> will return the answer. Of course, in order to do this we need to understand how to talk to <code class="docutils literal notranslate"><span class="pre">R</span></code>, which is why we must learn the syntax and structure of the language so we can communicate what it is that we want.</p>
+<p>If you have never learned a programming language before, there will be a steep learning curve as you get used to this way of working. This will start will a lot of frustration, as you will likely be getting more errors than useful outputs. Just remember …</p>
+</div>
+</section>
+<section id="r-as-a-calculator">
+<h2>R as a Calculator<a class="headerlink" href="#r-as-a-calculator" title="Link to this heading">#</a></h2>
+<p>To ease you into the process of using <code class="docutils literal notranslate"><span class="pre">R</span></code>, we will start by basically using <code class="docutils literal notranslate"><span class="pre">R</span></code> as an over-engineered calculator. This will get you used to interacting with the interpreter through the console, before we move on to some more usual ways of using the language.</p>
+<p>To begin with, just try typing a basic calculation into the console and then pressing <kbd>⏎</kbd>. For example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">12</div></div>
+</div>
+<p>Here, we asked <code class="docutils literal notranslate"><span class="pre">R</span></code> what <span class="math notranslate nohighlight">\(7 + 5\)</span> is and it correctly returned the answer of <span class="math notranslate nohighlight">\(12\)</span>. Similarly, we can perform subtraction using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">-2</div></div>
+</div>
+<p>In general, <code class="docutils literal notranslate"><span class="pre">R</span></code> has built-in support for all the main mathematical operators. The table below provides a comparison between them. Try using some of these on your own to check you understand how they work</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head"><p>Meaning</p></th>
+<th class="head text-right"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td><p>Addition</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td><p>Subtraction</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">-</span> <span class="pre">8</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Multiplication</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">*</span> <span class="pre">7</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p>Division</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">/</span> <span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td><p>Exponent</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">3^2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">%%</span></code></p></td>
+<td><p>Division Remainder (Modulus)</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">%%</span> <span class="pre">3</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="assigning-values-to-a-variable">
+<h2>Assigning Values to a Variable<a class="headerlink" href="#assigning-values-to-a-variable" title="Link to this heading">#</a></h2>
+<p>… We will discuss more about variables in the next section. For now, just note that the <code class="docutils literal notranslate"><span class="pre">R</span></code> syntax to assign a value to a variable uses the operator <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code>. For example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>has assigned the value <code class="docutils literal notranslate"><span class="pre">5</span></code> to a variable called <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Why the Funny Assignment Operator?</p>
+<p>The use of the symbol <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> may seem a strange choice within <code class="docutils literal notranslate"><span class="pre">R</span></code>, especially when all other programming languages use <code class="docutils literal notranslate"><span class="pre">=</span></code> for assignment. However, there are some good reasons for using <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code>. Firstly, it is possible to use <code class="docutils literal notranslate"><span class="pre">=</span></code> for assignment in <code class="docutils literal notranslate"><span class="pre">R</span></code>, but typically we reserve this for named function arguments (more on that later). The utility of the <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> symbol is that it indicates the <em>direction</em> of assignment, which you cannot do using <code class="docutils literal notranslate"><span class="pre">=</span></code>. What this means is that the <em>flow</em> of assigment is clear, but also means we can perform assignment in the <em>other direction</em>, if we want. For instance, we can write either <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;-</span> <span class="pre">5</span></code> or <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">-&gt;</span> <span class="pre">a</span></code>. Although we will generally have a preference for assigning from right-to-left, there may be situations where the code is clearer is the assignment happens left-to-right.</p>
+</div>
+</section>
+<section id="viewing-a-dataset">
+<h2>Viewing a Dataset<a class="headerlink" href="#viewing-a-dataset" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">data</span><span class="p">(</span><span class="s">&#39;mtcars&#39;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 6 × 11</caption>
+<thead>
+	<tr><th></th><th scope=col>mpg</th><th scope=col>cyl</th><th scope=col>disp</th><th scope=col>hp</th><th scope=col>drat</th><th scope=col>wt</th><th scope=col>qsec</th><th scope=col>vs</th><th scope=col>am</th><th scope=col>gear</th><th scope=col>carb</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>Mazda RX4</th><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.620</td><td>16.46</td><td>0</td><td>1</td><td>4</td><td>4</td></tr>
+	<tr><th scope=row>Mazda RX4 Wag</th><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.875</td><td>17.02</td><td>0</td><td>1</td><td>4</td><td>4</td></tr>
+	<tr><th scope=row>Datsun 710</th><td>22.8</td><td>4</td><td>108</td><td> 93</td><td>3.85</td><td>2.320</td><td>18.61</td><td>1</td><td>1</td><td>4</td><td>1</td></tr>
+	<tr><th scope=row>Hornet 4 Drive</th><td>21.4</td><td>6</td><td>258</td><td>110</td><td>3.08</td><td>3.215</td><td>19.44</td><td>1</td><td>0</td><td>3</td><td>1</td></tr>
+	<tr><th scope=row>Hornet Sportabout</th><td>18.7</td><td>8</td><td>360</td><td>175</td><td>3.15</td><td>3.440</td><td>17.02</td><td>0</td><td>0</td><td>3</td><td>2</td></tr>
+	<tr><th scope=row>Valiant</th><td>18.1</td><td>6</td><td>225</td><td>105</td><td>2.76</td><td>3.460</td><td>20.22</td><td>1</td><td>0</td><td>3</td><td>1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="making-a-plot">
+<h2>Making a Plot<a class="headerlink" href="#making-a-plot" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span><span class="n">mtcars</span><span class="o">$</span><span class="n">wt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/87a783d2ea925b6e5ea99cb3ab6cc40a1eb80816b02fdc3b9eeaf10d555700c5.png"><img alt="_images/87a783d2ea925b6e5ea99cb3ab6cc40a1eb80816b02fdc3b9eeaf10d555700c5.png" src="_images/87a783d2ea925b6e5ea99cb3ab6cc40a1eb80816b02fdc3b9eeaf10d555700c5.png" style="width: 420px; height: 420px;" /></a>
+</div>
+</div>
+</section>
+<section id="calculating-a-correlation">
+<h2>Calculating a Correlation<a class="headerlink" href="#calculating-a-correlation" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cor.test</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span><span class="n">mtcars</span><span class="o">$</span><span class="n">wt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Pearson&#39;s product-moment correlation
+
+data:  mtcars$mpg and mtcars$wt
+t = -9.559, df = 30, p-value = 1.294e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.9338264 -0.7440872
+sample estimates:
+       cor 
+-0.8676594 
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="foot1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>An <em>interpreted</em> programming language is one where…</p>
+</aside>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,6 +625,26 @@
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-r-console">The R Console</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-as-a-calculator">R as a Calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-values-to-a-variable">Assigning Values to a Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-a-dataset">Viewing a Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-plot">Making a Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-a-correlation">Calculating a Correlation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -472,8 +688,8 @@ By Dr George Farmer & Dr Martyn McFarquhar
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
