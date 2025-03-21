@@ -9,4 +9,5 @@ chapters:
 - file: 3.exploring-R
 - file: 4.basic-programming
 - file: 5.scripts
+- file: 6.rstudio-projects
 - file: summary
